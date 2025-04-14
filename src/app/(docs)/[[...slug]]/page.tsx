@@ -10,7 +10,6 @@ import defaultMdxComponents, { createRelativeLink } from "fumadocs-ui/mdx";
 import { ImageZoom } from "fumadocs-ui/components/image-zoom";
 import { CodeBlock, Pre } from "fumadocs-ui/components/codeblock";
 import { metadataImage } from "@/lib/metadata";
-import Footer from "@/components/footer";
 
 export default async function Page(props: {
   params: Promise<{ slug?: string[] }>;
@@ -41,7 +40,6 @@ export default async function Page(props: {
           }}
         />
       </DocsBody>
-      <Footer />
     </DocsPage>
   );
 }
