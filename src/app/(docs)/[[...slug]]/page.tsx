@@ -58,5 +58,9 @@ export async function generateMetadata(props: {
   return metadataImage.withImage(page.slugs, {
     title: page.data.title,
     description: page.data.description,
+    metadataBase:
+      process.env.NODE_ENV === "production"
+        ? new URL("https://zendocs.listjonas.com")
+        : undefined,
   });
 }
